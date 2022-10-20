@@ -1,19 +1,19 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\V1\ShortLinkController;
+use \App\Http\Controllers\Api\V1\AuthController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+//Public routes
+Route::post('/links', [ShortLinkController::class, 'store']);
+Route::post('/register', [AuthController::class, 'register']);
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+//Protected routes using sanctum
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/links', [ShortLinkController::class, 'index']);
+    Route::put('/links/{id}', [ShortLinkController::class, 'update']);
+    Route::delete('/links/{id}', [ShortLinkController::class, 'destroy']);
+    Route::get('/links/search/{name}', [ShortLinkController::class, 'search']);
+    Route::get('/links/{id}', [ShortLinkController::class, 'show']);
+    Route::post('/logout', [AuthController::class, 'logout']);
 });
