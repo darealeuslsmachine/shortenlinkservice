@@ -3,7 +3,7 @@ docker/var/log
 docker/var/data
 
 # Editor directories and files
-.idea/
+.idea
 .vscode/
 *.suo
 *.ntvs*
