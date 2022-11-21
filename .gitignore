@@ -18,6 +18,7 @@ docker/var/data
 hosts
 
 #laravel project
+src/vendor
 src/node_modules
 src/public/hot
 src/public/storage
