@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ipr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/ipr_app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/iprt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/iprtest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/site" vcs="Git" />
   </component>
 </project>
